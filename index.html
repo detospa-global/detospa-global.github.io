@@ -56,9 +56,9 @@ a[data-saved] small{order:3}
     if (a.getAttribute('data-lang') === saved) { a.setAttribute('data-saved', ''); target = a; }
     a.addEventListener('click', function () { try { localStorage.setItem(KEY, a.getAttribute('data-lang')); } catch (e) {} });
   });
-  /* Return visitors go straight to the language they chose before.
-     No country or IP detection; #choose always shows this screen. */
-  if (target && location.hash !== '#choose') location.replace(target.href);
+  /* The last choice is only marked (dot), never followed automatically:
+     this screen always stays visible. No country or IP detection. */
+  if (target) target.focus({ preventScroll: true });
 })();
 </script>
 </body>
