@@ -85,7 +85,7 @@
     /* photos zoom out as they appear, but only those inside .ph */
     document.querySelectorAll('.ph').forEach(function (el) { if (!el.classList.contains('rv')) { el.classList.add('rv'); io.observe(el); } });
     /* elements with their own entrance (no fade on the container) */
-    document.querySelectorAll('.bridge, .frow, .contact-unit').forEach(function (el) { io.observe(el); });
+    document.querySelectorAll('.bridge, .frow, .contact-unit, .care').forEach(function (el) { io.observe(el); });
   }
 
   /* Scroll-linked: the film widens to the page edge as it arrives; the step line fills as steps are read. */
